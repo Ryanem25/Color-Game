@@ -1,0 +1,482 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #CA955C;
+}
+
+.container{
+  min-height: 100px;
+  width: 100%;
+  max-width: 500px;
+  margin: 5% auto;
+}
+
+.colorDice{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10%;
+}
+
+#betAmount{
+  width: 100%;
+  min-height: 45px;
+}
+#dice1{
+  
+  animation-duration: 5s;
+  animation-delay: .2s;
+}
+
+
+#dice1,
+#dice2,
+#dice3{
+  min-height:100px;
+  width: calc(90% / 3);
+  border: 3px solid black;
+  border-radius: 8px;
+  transition: all .3s ease;
+}
+
+#dice1{
+  background: red;
+}
+#dice2{
+  margin: 0 3%;
+  background: white;
+}
+
+#dice3{
+  background: white;;
+}
+
+
+/*Tables*/
+.tableColors{
+  margin-top: 4%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+.color{
+  width: calc(100% / 3);
+  border: 1.2px solid black;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+
+
+.c1{
+  background: pink;
+}
+
+.c2 {
+  background: white;
+}
+
+.c3 {
+  background: yellow;
+}
+
+.c4 {
+  background: green;
+}
+
+.c5 {
+  background: red;
+}
+
+.c6 {
+  background: blue;
+}
+
+.rollBox{
+  margin-top: 4%;
+  width: 100%;
+  min-height: 50px;
+  margin-bottom: 4%;
+}
+
+#info-box{
+  text-align: center;
+}
+
+#roll:disabled{
+  background: red;
+  color: white;
+}
+
+#roll,
+#newRound{
+  width: 100%;
+  min-height: 50px;
+  border-radius: 8px;
+  border-style: none;
+  border: 1px solid black;
+  border: 1px solid black;
+  font-weight: bolder;
+  letter-spacing: .4rem;
+  font-size: 1.2rem;
+  background: green;
+  transition: all .3s ease-out;
+  color: white;;
+}
+
+#newRound{
+  display: none;
+}
+/*End of Tables*/
+
+@media only screen and (max-width: 700px){
+  
+  .container{
+    max-width: 380px;
+  }
+  
+}
+
+.msgErr{
+  color: red;
+}
+.add{
+  min-height: 30px;
+  width: calc(96% / 5);
+  color: black;
+  background: whitesmoke;
+  border-style: none;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 2%;
+}
+
+.betColor{
+  display: flex;
+  justify-content: start;
+ align-items: center;
+  min-height: 30px;
+  
+ 
+}
+#betPink{
+  background: pink;
+  border: 1px solid black;
+  height: 25px;
+  width: 25px;
+}
+
+#betWhite{
+  background: white;
+  border: 1px solid black;
+  height: 25px;
+  width: 25px;
+}
+
+#betYellow{
+  background: yellow;
+  border: 1px solid black;
+  height: 25px;
+  width: 25px;
+}
+
+#betGreen{
+  background: green;
+  border: 1px solid black;
+  height: 25px;
+  width: 25px;
+}
+
+#betRed{
+  background: red;
+  border: 1px solid black;
+  height: 25px;
+  width: 25px;
+}
+
+#betBlue{
+  background: blue;
+  border: 1px solid black;
+  height: 25px;
+  width: 25px;
+}
+
+.dice1Roll{
+  animation: dice1Rolling;
+  animation-duration: 4s;
+}
+
+.dice2Roll {
+  animation: dice1Rolling;
+  animation-duration: 6s;
+}
+
+.dice3Roll {
+  animation: dice1Rolling;
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+@keyframes dice1Rolling{
+  5%{
+    background: red;
+  }
+  10%{
+    background:blue;
+  }
+  15%{
+    background: green;
+  }
+  20%{
+    background: yellow;
+  }
+  25%{
+    background: white;
+  }
+  30%{
+    background: pink;
+  }
+  35%{
+    background: red;
+  }
+  40%{
+    background: white;
+  }
+  45%{
+    background: yellow;
+  }
+  50%{
+    background: blue;
+  }
+  55%{
+    background: pink;
+  }
+  60%{
+    background: green;
+  }
+  65%{
+    background: white;
+  }
+  70%{
+    background: red;
+  }
+  75%{
+    background: yellow;
+  }
+  80%{
+    background: blue;
+  }
+  85%{
+    background: green;
+  }
+  90%{
+    background: pink;
+  }
+  95%{
+    background: yellow;
+  }
+  100%{
+    background: white;
+  }
+}
+
+@keyframes dice2Rolling{
+  5%{
+    background: yellow;
+  }
+  10%{
+    background:green;
+  }
+  15%{
+    background: blue;
+  }
+  20%{
+    background: red;
+  }
+  25%{
+    background: pink;
+  }
+  30%{
+    background: white;
+  }
+  35%{
+    background: yellow;
+  }
+  40%{
+    background: green;
+  }
+  45%{
+    background: pink;
+  }
+  50%{
+    background: red;
+  }
+  55%{
+    background: blue;
+  }
+  60%{
+    background: white;
+  }
+  65%{
+    background: pink;
+  }
+  70%{
+    background: blue;
+  }
+  75%{
+    background: yellow;
+  }
+  80%{
+    background: blue;
+  }
+  85%{
+    background: green;
+  }
+  90%{
+    background: pink;
+  }
+  95%{
+    background: yellow;
+  }
+  100%{
+    background: white;
+  }
+}
+
+@keyframes dice3Rolling{
+  5%{
+    background: red;
+  }
+  10%{
+    background:blue;
+  }
+  15%{
+    background: green;
+  }
+  20%{
+    background: yellow;
+  }
+  25%{
+    background: white;
+  }
+  30%{
+    background: pink;
+  }
+  35%{
+    background: red;
+  }
+  40%{
+    background: white;
+  }
+  45%{
+    background: yellow;
+  }
+  50%{
+    background: blue;
+  }
+  55%{
+    background: pink;
+  }
+  60%{
+    background: green;
+  }
+  65%{
+    background: white;
+  }
+  70%{
+    background: red;
+  }
+  75%{
+    background: yellow;
+  }
+  80%{
+    background: blue;
+  }
+  85%{
+    background: green;
+  }
+  90%{
+    background: pink;
+  }
+  95%{
+    background: white;
+  }
+  100%{
+    background: red;
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.dicess{
+  display: flex;
+  justify-content: center;
+  
+}
+#balance{
+  margin: 2% 0 2% 2%;
+}
+
+.textInf{
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+
+

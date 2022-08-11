@@ -1,0 +1,71 @@
+  <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Color Game</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="colorDice">
+
+      <div id="dice1"></div>
+      <div id="dice2"></div>
+      <div id="dice3"></div>
+
+
+    </div>
+    <div class="textInf"> 
+      <p>Your Balance: </p><p id="balance">500</p>
+      
+    </div>
+    <div class="bet">
+      <button class="add" id="add500">500</button>
+      <button class="add" id="add200">200</button>
+      <button class="add" id="add100">100</button>
+      <button class="add" id="add50">50</button>
+      <button class="add" id="add20">All In</button>
+      <div id="bet">
+
+      </div>
+      <input type="number" id="betAmount">
+    </div>
+    <div class="tableColors">
+      <div class="color c1"> <span id="pinkAmount"></span></div>
+      <div class="color c2"> <span id="whiteAmount"></span></div>
+      <div class="color c3"> <span id="yellowAmount"></span></div>
+      <div class="color c4"> <span id="greenAmount"></span></div>
+      <div class="color c5"> <span id="redAmount"></span></div>
+      <div class="color c6"> <span id="blueAmount"></span></div>
+
+    </div>
+    <div class="rollBox">
+      <button id="roll" onclick="rolling()">Place Your Bet First</button>
+
+    </div>
+    <div id="info-box">
+    </div>
+
+ 
+    <div class="modal">
+      <div class="modal-content">
+        
+
+        <h2 id="congMsg">Hey</h2>
+        <p id="myMoney"></p>
+      
+ <button id="newRound" onclick="newRound()">Collect</button>
+      </div>
+    </div>
+
+
+
+
+      <script src="script.js"></script>
+</body>
+
+</html>
